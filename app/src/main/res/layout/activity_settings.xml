@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1">
+
+        <include layout="@layout/layout_top_settingstoolbar"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/layout1"
+        android:background="@drawable/gray_border_bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@string/string_saveOrigin"/>
+
+        <Switch
+            android:id="@+id/originBtn"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/string_yes"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/rel1"
+        android:id="@+id/rel2"
+        android:background="@drawable/gray_border_bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@string/string_favorite"/>
+
+        <Switch
+            android:id="@+id/favoriteBtn"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/string_yes"
+            android:textSize="15sp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/rel2"
+        android:id="@+id/rel3"
+        android:background="@drawable/gray_border_bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@string/string_shareApp"/>
+
+        <ImageButton
+            android:id="@+id/shareApp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/darkblue"
+            android:src="@drawable/ic_share_app"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/rel3"
+        android:id="@+id/rel4"
+        android:background="@drawable/gray_border_bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="@string/string_sendMsg"/>
+
+        <ImageButton
+            android:id="@+id/sendMsg"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/darkblue"
+            android:src="@drawable/ic_send_msg"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_bottom_adview" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/profileToolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/backScreen"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:layout_toEndOf="@+id/backScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/string_settings"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:id="@+id/profileName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/saveSettings"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/string_save"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</merge>

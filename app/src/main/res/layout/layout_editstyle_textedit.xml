@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/edit_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_white"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/edit_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_white"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_yellow"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/edit_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_gray"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_black"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/edit_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_black"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/string_tag"
+            android:textColor="@color/black"
+            android:background="@drawable/circle_white"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/edit_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_tag"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/string_small"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_black"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/edit_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/edit_small"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/string_reset"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_black"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/string_date"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:background="@drawable/underline"
+            android:id="@+id/changedDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/preventText"
+            android:text="@string/string_prevent"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

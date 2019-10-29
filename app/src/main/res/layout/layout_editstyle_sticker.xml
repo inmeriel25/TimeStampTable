@@ -1,0 +1,241 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_square"
+            android:layout_weight="1"
+            android:id="@+id/userEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="글쓰기"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/mission"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/mission"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/confirm"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/study"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/study"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/breakfast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/breakfast"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/lunch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/lunch"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/dinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/dinner"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/snack1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/snack1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/snack2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/snack2"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/snack3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/snack3"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/chart_breakfast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/breaky"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/chart_lunch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/lunch"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/chart_snack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/snack"
+            android:gravity="center"/>
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/chart_dinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/dinner"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/runDay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="@string/runDay"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/running"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/running_big"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/bicycle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bicycle_big"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/muscle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/muscle_big"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>
+

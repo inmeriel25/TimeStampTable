@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">TimeStampTable</string>
+    <string name="app_lable_name">Time Stamp</string>
+    <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera.</string>
+    <string name="camera_permission_not_granted">Camera app cannot do anything without camera permission.</string>
+    <string name="picture_taken">Picture taken</string>
+    <string name="circle_frame">Circle frame</string>
+    <string name="aspect_ratio">Aspect ratio</string>
+    <string name="switch_flash">Switch flash</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="flash_auto">Flash auto</string>
+    <string name="flash_off">Flash off</string>
+    <string name="flash_on">Flash on</string>
+
+    <string name="selected_image">selected_image</string>
+    <string name="captured_url">captured_url</string>
+    <string name="currentTime">currentTime</string>
+    <string name="string_editpicture">EDIT PICTURE</string>
+    <string name="string_gallery">GALLERY</string>
+    <string name="string_settings">SETTINGS</string>
+    <string name="string_next">NEXT</string>
+    <string name="string_save">SAVE</string>
+    <string name="string_share">SHARE</string>
+    <string name="string_style">STYLE</string>
+    <string name="string_font">FONT</string>
+    <string name="string_sticker">STICKER</string>
+    <string name="string_pet">PET</string>
+    <string name="string_colortime">COLOR &amp; TIME</string>
+    <string name="string_edit">TEXT EDIT</string>
+    <string name="string_tag">TAG</string>
+    <string name="string_reset">RESET</string>
+    <string name="string_small">SMALL</string>
+    <string name="string_big">BIG</string>
+    <string name="string_date">DATE</string>
+    <string name="string_prevent">인증스티커를 붙이면 시간을 수정할 수 없습니다.</string>
+    <string name="string_datepicker">DATE TIME PICKER</string>
+    <string name="string_saveOrigin">원본 사진 저장</string>
+    <string name="string_favorite">즐겨찾는 스타일 바로 적용</string>
+    <string name="string_shareApp">Time Stamp 어플 공유하기</string>
+    <string name="string_sendMsg">개발자에게 문의하기</string>
+    <string name="string_no">no</string>
+    <string name="string_yes">yes</string>
+    <string name="message_subject_mail">Time Stamp 사용자가 보낸 메시지입니다.</string>
+
+
+    <string name="style1">style1</string>
+    <string name="style2">style2</string>
+    <string name="style3">style3</string>
+    <string name="style4">style4</string>
+    <string name="style5">style5</string>
+    <string name="style6">style6</string>
+    <string name="style7">style7</string>
+    <string name="font1">FONT1</string>
+    <string name="font2">FONT2</string>
+    <string name="font3">FONT3</string>
+    <string name="font4">FONT4</string>
+    <string name="font5">FONT5</string>
+    <string name="font6">FONT6</string>
+    <string name="confirm">인증</string>
+    <string name="study">&#160;&#160;STUDY&#160;&#160;</string>
+    <string name="breakfast">&#160;&#160;BREAKFAST&#160;&#160;&#160;</string>
+    <string name="lunch">&#160;&#160;LUNCH&#160;&#160;</string>
+    <string name="dinner">&#160;&#160;DINNER&#160;&#160;</string>
+    <string name="snack1">&#160;&#160;SNACK1&#160;&#160;</string>
+    <string name="snack2">&#160;&#160;SNACK2&#160;&#160;</string>
+    <string name="snack3">&#160;&#160;SNACK3&#160;&#160;</string>
+    <string name="runDay">&#160;&#160;RUNDAY&#160;&#160;</string>
+    <string name="thisIs">This is...</string>
+    <!--font-->
+    <string name="font_Mockup">fonts/Mockup-Regular.otf</string>
+    <string name="font_Digitalt">fonts/Digitalt.ttf</string>
+    <string name="font_AlegreSans">fonts/AlegreSans-Regular.ttf</string>
+    <string name="font_RawengulkSans">fonts/RawengulkSans-094.ttf</string>
+    <string name="font_bgrovealtb">fonts/bgrovealtb.ttf</string>
+    <string name="font_BMDOHYEON">fonts/BMDOHYEON.ttf</string>
+    <string name="font_misaeng">fonts/SDMiSaeng.ttf</string>
+    <string name="font_tvn">fonts/tvN_Medium.ttf</string>
+    <string name="font_swagger">fonts/SDSwaggerTTF.ttf</string>
+
+    <!--alert and notice-->
+    <string name="app_notice_yes">확인</string>
+    <string name="app_notice_no">다시 보지 않기</string>
+    <string name="alert_title">글쓰기(50자 이내)</string>
+    <string name="alert_yes">입력</string>
+    <string name="alert_no">취소</string>
+
+    <!--adfit-->
+    <string name="adfit_clientId">DAN-1jezc8i846hq1</string>
+
+</resources>

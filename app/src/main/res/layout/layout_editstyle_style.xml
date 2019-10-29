@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp">
+
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style1"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/timestamp1_small"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/timestamp2_small"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/timestamp3_small"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date2"/>
+
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date3"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/edit_style7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"/>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
+
+    <include layout="@layout/layout_bottom_adview"/>
+
+</RelativeLayout>
