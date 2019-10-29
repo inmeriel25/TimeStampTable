@@ -6,8 +6,8 @@ android {
         applicationId "com.eklee.timestamptable"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 18
-        versionName "1.6.3"
+        versionCode 19
+        versionName "1.6.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

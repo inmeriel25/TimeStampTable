@@ -252,76 +252,74 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
     private void createOriginalFile(byte[] jpeg) {
 
-
         CameraUtils.decodeBitmap(jpeg, 2000, 2000, new CameraUtils.BitmapCallback() {
             @Override
-            public void onBitmapReady(Bitmap bitmap) {
+            public void onBitmapReady(final Bitmap bitmap) {
                 Log.d(TAG, "onBitmapReady: creating original file in directory.");
 
-                File mediaStorageDir = new File(
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-                        mContext.getString(R.string.app_lable_name)
-                );
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
 
-                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", new Locale("en", "US")).format(new Date());
+                                File mediaStorageDir = new File(
+                                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                                        mContext.getString(R.string.app_lable_name)
+                                );
 
-                if (!mediaStorageDir.exists()) {
-                    mediaStorageDir.mkdir();
-                }
+                                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", new Locale("en", "US")).format(new Date());
 
-                File mediaFile = null;
-                try {
-                    mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_" + timeStamp + ".jpg");
-                    if (!mediaFile.exists()) {
-                        mediaFile.createNewFile();
+                                if (!mediaStorageDir.exists()) {
+                                    mediaStorageDir.mkdir();
+                                }
+
+                                File mediaFile = null;
+                                try {
+                                    mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_" + timeStamp + ".jpg");
+                                    if (!mediaFile.exists()) {
+                                        mediaFile.createNewFile();
+                                    }
+                                }
+                                catch(Exception e){
+                                    Log.w("creating file error", e.toString());
+                                    Toast.makeText(mContext, "파일 생성 실패. 개발자에게 문의하세요. (error code: 30001)", Toast.LENGTH_SHORT).show();
+                                }
+
+                                FileOutputStream fos = null;
+
+                                try {
+                                    fos = new FileOutputStream(mediaFile);
+                                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+
+                                } catch (FileNotFoundException e) {
+                                    Log.e(TAG, "onBitmapReady: FileNotFoundException: " + e.getMessage());
+                                    Toast.makeText(mContext, "파일 생성 실패. 개발자에게 문의하세요. (error code: 30002)", Toast.LENGTH_SHORT).show();
+
+                                } finally {
+                                    try {
+                                        fos.flush();
+                                        fos.close();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+
+                                // Media scanning for showing the saved image in Gallery
+                                Intent mediaScannerIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                                Uri fileContentUri = Uri.fromFile(mediaFile);
+                                fileUri = mediaFile.getPath();
+
+                                Log.d(TAG, "onBitmapReady: uri: " +  fileUri + " fileContentUri: " + fileContentUri);
+                                mediaScannerIntent.setData(fileContentUri);
+                                mContext.sendBroadcast(mediaScannerIntent);
+
+                                goToEditActivity(fileUri);
+                            }
+                        });
                     }
-                }
-                catch(Exception e){
-                    Log.w("creating file error", e.toString());
-                    Toast.makeText(mContext, "파일 생성 실패. 개발자에게 문의하세요. (error code: 30001)", Toast.LENGTH_SHORT).show();
-                }
-
-                FileOutputStream fos = null;
-
-                try {
-                    fos = new FileOutputStream(mediaFile);
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-
-//                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
-//                byte[] bitmapData = bos.toByteArray();
-//
-//                FileOutputStream fos = null;
-//                try {
-//                    fos = new FileOutputStream(mediaFile);
-//                    fos.write(bitmapData);
-//                    fos.flush();
-//                    fos.close();
-                }
-                catch (FileNotFoundException e) {
-                    Log.e(TAG, "onBitmapReady: FileNotFoundException: " + e.getMessage());
-                    Toast.makeText(mContext, "파일 생성 실패. 개발자에게 문의하세요. (error code: 30002)", Toast.LENGTH_SHORT).show();
-                }
-                finally
-                {
-                    try {
-                        fos.flush();
-                        fos.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                // Media scanning for showing the saved image in Gallery
-                Intent mediaScannerIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                Uri fileContentUri = Uri.fromFile(mediaFile);
-                fileUri = mediaFile.getPath();
-
-                Log.d(TAG, "onBitmapReady: uri: " +  fileUri + " fileContentUri: " + fileContentUri);
-                mediaScannerIntent.setData(fileContentUri);
-                mContext.sendBroadcast(mediaScannerIntent);
-
-                goToEditActivity(fileUri);
+                }).start();
             }
         });
     }
